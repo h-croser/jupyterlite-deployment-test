@@ -1,29 +1,58 @@
-# JupyterLite Demo
+# Corpus Loader
 
-[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jupyterlite.github.io/demo)
+A GUI loader for atap_corpus using the Panel library. Provides a single Panel-compatible widget in which a user can construct a corpus object for use by the client code.
 
-JupyterLite deployed as a static site to GitHub Pages, for demo purposes.
+### File Type support
 
-## ✨ Try it in your browser ✨
+The loader currently supports loading a corpus from the following file types:
+- txt
+- odt
+- docx
+- csv
+- tsv
+- xlsx
+- ods
+- rds
+- RData/RDa
 
-➡️ **https://jupyterlite.github.io/demo**
+## Setup
 
-![github-pages](https://user-images.githubusercontent.com/591645/120649478-18258400-c47d-11eb-80e5-185e52ff2702.gif)
+### Prerequisites
 
-## Requirements
+- [Python 3.10](https://www.python.org/)
 
-JupyterLite is being tested against modern web browsers:
+Run the following commands in a terminal or any Bash environment.
 
-- Firefox 90+
-- Chromium 89+
+Clone the repository and navigate into the newly created directory:
 
-## Deploy your JupyterLite website on GitHub Pages
+```shell
+git clone https://github.com/Australian-Text-Analytics-Platform/atap_corpus_loader.git
+cd atap_corpus_loader
+```
 
-Check out the guide on the JupyterLite documentation: https://jupyterlite.readthedocs.io/en/latest/quickstart/deploy.html
+To install dependencies, ensure you have Python 3.10 and pip installed, then run the following command:
 
-## Further Information and Updates
+```shell
+python -m pip install -r requirements.txt
+```
 
-For more info, keep an eye on the JupyterLite documentation:
+Serve the application locally using the following command:
 
-- How-to Guides: https://jupyterlite.readthedocs.io/en/latest/howto/index.html
-- Reference: https://jupyterlite.readthedocs.io/en/latest/reference/index.html
+```shell
+panel serve corpusloader.ipynb
+```
+
+The application will be usable in a browser at the link provided (http://localhost:5006/corpusloader)
+
+## Versioning
+
+We use [Semantic Versioning](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/Australian-Text-Analytics-Platform/atap_corpus_loader/tags).
+
+## Authors
+
+  - **Hamish Croser** - [h-croser](https://github.com/h-croser)
+
+## License
+
+This project is licensed under the [The MIT License](LICENSE)
+The MIT License - see the [LICENSE](LICENSE) file for details
